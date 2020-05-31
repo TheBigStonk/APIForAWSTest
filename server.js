@@ -3,16 +3,15 @@ require("dotenv").config();
 const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
-const MongoClient = require('mongodb').MongoClient;
 
-const uri = process.env.DATABASE_URL;
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => {
+  console.log("MongoDB Connected…")
+})
+.catch(err => console.log(err))
 
 app.use(express.json())
 
