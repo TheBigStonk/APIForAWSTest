@@ -1,0 +1,27 @@
+{
+  "name": "apiforazuretest",
+  "version": "1.0.0",
+  "description": "API For Azure Test",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheBigStonk/APIForAzureTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheBigStonk/APIForAzureTest/issues"
+  },
+  "homepage": "https://github.com/TheBigStonk/APIForAzureTest#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.16"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
