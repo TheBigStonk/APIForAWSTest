@@ -1,9 +1,12 @@
+// Instantiation of variables
 require("dotenv").config();
 
 const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
 
+
+// Database connection
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -13,6 +16,8 @@ mongoose.connect(process.env.DATABASE_URL, {
 })
 .catch(err => console.log(err))
 
+
+// App stuff and handling router
 app.use(express.json())
 
 const questionsRouter = require("./routes/questions")

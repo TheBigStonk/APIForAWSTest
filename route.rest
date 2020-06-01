@@ -3,3 +3,17 @@ GET http://localhost:3000/questions
 ###
 
 GET http://localhost:3000/questions/15
+
+###
+
+POST http://localhost:3000/questions
+Content-Type: application/json
+
+{
+    "question": " How would a system administrator add an additional layer of login security to a user's AWS Management Console?",
+    "option1": "Use AWS Cloud Directory",
+    "option2": "Audit AWS Identity and Access Management (IAM) roles",
+    "option3": "Enable Multi-Factor Authentication",
+    "option4": "Enable AWS CloudTrail",
+    "answer": "Enable Multi-Factor Authentication"
+}
